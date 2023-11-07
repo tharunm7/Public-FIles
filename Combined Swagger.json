@@ -1,0 +1,1518 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": null,
+    "version": "1.0.0",
+    "title": null,
+    "termsOfService": null,
+    "contact": null,
+    "license": null
+  },
+  "host": "us.api.concursolutions.com",
+  "basePath": "/oauth2",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/v0/token": {
+      "post": {
+        "tags": [
+          "CONCUR_GET_ACCESS_TOKEN"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_GET_ACCESS_TOKEN",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "formData",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "client_secret",
+            "in": "formData",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "refresh_token",
+            "in": "formData",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "grant_type",
+            "in": "formData",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CONCUR_GET_ACCESS_TOKEN"
+            }
+          }
+        }
+      }
+    },
+    "/identity/v4/Users": {
+      "get": {
+        "tags": [
+          "CONCUR_ALL_USERS"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_ALL_USERS",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "startIndex",
+            "in": "query",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "count",
+            "in": "query",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CONCUR_ALL_USERS"
+            }
+          }
+        }
+      }
+    },
+    "/user/v1.0/user/": {
+      "get": {
+        "tags": [
+          "CONCUR_GET_EXPENSE_UPDATED"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_GET_EXPENSE_UPDATED",
+        "produces": [
+          "application/xml"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "loginID",
+            "in": "query",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CONCUR_GET_EXPENSE_UPDATED"
+            }
+          }
+        }
+      }
+    },
+    "/Users": {
+      "get": {
+        "tags": [
+          "CONCUR_GET_SPEND_USERS"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_GET_SPEND_USERS",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/CONCUR_GET_SPEND_USERS"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/user/v1.0/user": {
+      "get": {
+        "tags": [
+          "CONCUR_GET_EXPENSE_APPROVER_DETAILS"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_GET_EXPENSE_APPROVER_DETAILS",
+        "produces": [
+          "application/xml"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "loginID",
+            "in": "query",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CONCUR_GET_EXPENSE_APPROVER_DETAILS"
+            }
+          }
+        }
+      }
+    },
+    "/v4/Users/{UserId}": {
+      "patch": {
+        "tags": [
+          "CONCUR_MGR_UPD_API_V4"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_MGR_UPD_API_V4",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": null,
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4_Request##body"
+            }
+          },
+          {
+            "name": "UserId",
+            "in": "path",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4"
+            }
+          }
+        }
+      }
+    },
+    "/spend/v4/Users/{UserID}": {
+      "get": {
+        "tags": [
+          "CONCUR_V4_MANAGER_EXPENSE"
+        ],
+        "summary": null,
+        "description": null,
+        "operationId": "CONCUR_V4_MANAGER_EXPENSE",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": null,
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "UserID",
+            "in": "path",
+            "description": null,
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CONCUR_GET_ACCESS_TOKEN": {
+      "properties": {
+        "expires_in": {
+          "type": "number",
+          "format": "int32"
+        },
+        "scope": {
+          "type": "string"
+        },
+        "token_type": {
+          "type": "string"
+        },
+        "access_token": {
+          "type": "string"
+        },
+        "refresh_token": {
+          "type": "string"
+        },
+        "refresh_expires_in": {
+          "type": "number",
+          "format": "int32"
+        },
+        "geolocation": {
+          "type": "string"
+        },
+        "id_token": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##localeOverrides": {
+      "properties": {
+        "preferenceEndDayViewHour": {
+          "type": "number",
+          "format": "int32"
+        },
+        "preferenceFirstDayOfWeek": {
+          "type": "string"
+        },
+        "preferenceDateFormat": {
+          "type": "string"
+        },
+        "preferenceCurrencySymbolLocation": {
+          "type": "string"
+        },
+        "preferenceHourMinuteSeparator": {
+          "type": "string"
+        },
+        "preferenceDistance": {
+          "type": "string"
+        },
+        "preferenceDefaultCalView": {
+          "type": "string"
+        },
+        "preference24Hour": {
+          "type": "string"
+        },
+        "preferenceNumberFormat": {
+          "type": "string"
+        },
+        "preferenceStartDayViewHour": {
+          "type": "number",
+          "format": "int32"
+        },
+        "preferenceNegativeCurrencyFormat": {
+          "type": "string"
+        },
+        "preferenceNegativeNumberFormat": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##addresses": {
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "locality": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##meta": {
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string"
+        },
+        "lastModified": {
+          "type": "string"
+        },
+        "version": {
+          "type": "number",
+          "format": "int32"
+        },
+        "location": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##name": {
+      "properties": {
+        "honorificSuffix": {
+          "type": "string"
+        },
+        "givenName": {
+          "type": "string"
+        },
+        "familyName": {
+          "type": "string"
+        },
+        "familyNamePrefix": {
+          "type": "string"
+        },
+        "honorificPrefix": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "formatted": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##phoneNumbers": {
+      "properties": {
+        "issuingCountry": {
+          "type": "string"
+        },
+        "display": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "notifications": {
+          "type": "boolean"
+        },
+        "primary": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##emergencyContacts": {
+      "properties": {
+        "country": {
+          "type": "string"
+        },
+        "streetAddress": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "locality": {
+          "type": "string"
+        },
+        "phones": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "relationship": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##emails": {
+      "properties": {
+        "verified": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "notifications": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User##manager": {
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "employeeNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+      "properties": {
+        "terminationDate": {
+          "type": "string"
+        },
+        "companyId": {
+          "type": "string"
+        },
+        "manager": {
+          "$ref": "#/definitions/CONCUR_ALL_USERS##Resources##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User##manager"
+        },
+        "costCenter": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "employeeNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS##Resources": {
+      "properties": {
+        "localeOverrides": {
+          "$ref": "#/definitions/CONCUR_ALL_USERS##Resources##localeOverrides"
+        },
+        "addresses": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "meta": {
+          "$ref": "#/definitions/CONCUR_ALL_USERS##Resources##meta"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "name": {
+          "$ref": "#/definitions/CONCUR_ALL_USERS##Resources##name"
+        },
+        "phoneNumbers": {
+          "type": "string"
+        },
+        "emergencyContacts": {
+          "type": "string"
+        },
+        "preferredLanguage": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        },
+        "nickName": {
+          "type": "string"
+        },
+        "schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "emails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_ALL_USERS##Resources##emails"
+          }
+        },
+        "userName": {
+          "type": "string"
+        },
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+          "$ref": "#/definitions/CONCUR_ALL_USERS##Resources##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        }
+      }
+    },
+    "CONCUR_ALL_USERS": {
+      "properties": {
+        "schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "totalResults": {
+          "type": "number",
+          "format": "int32"
+        },
+        "startIndex": {
+          "type": "number",
+          "format": "int32"
+        },
+        "itemsPerPage": {
+          "type": "number",
+          "format": "int32"
+        },
+        "Resources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_ALL_USERS##Resources"
+          }
+        }
+      }
+    },
+    "CONCUR_GET_EXPENSE_UPDATED##UserProfile": {
+      "properties": {
+        "xmlns": {
+          "type": "string"
+        },
+        "xmlns:i": {
+          "type": "string"
+        },
+        "Active": {
+          "type": "string"
+        },
+        "CashAdvanceAccountCode": {
+          "type": "string"
+        },
+        "CrnKey": {
+          "type": "string"
+        },
+        "CtryCode": {
+          "type": "string"
+        },
+        "CtrySubCode": {
+          "type": "string"
+        },
+        "Custom1": {
+          "type": "string"
+        },
+        "Custom10": {
+          "type": "string"
+        },
+        "Custom11": {
+          "type": "string"
+        },
+        "Custom12": {
+          "type": "string"
+        },
+        "Custom13": {
+          "type": "string"
+        },
+        "Custom14": {
+          "type": "string"
+        },
+        "Custom15": {
+          "type": "string"
+        },
+        "Custom16": {
+          "type": "string"
+        },
+        "Custom17": {
+          "type": "string"
+        },
+        "Custom18": {
+          "type": "string"
+        },
+        "Custom19": {
+          "type": "string"
+        },
+        "Custom2": {
+          "type": "string"
+        },
+        "Custom20": {
+          "type": "string"
+        },
+        "Custom21": {
+          "type": "string"
+        },
+        "Custom3": {
+          "type": "string"
+        },
+        "Custom4": {
+          "type": "string"
+        },
+        "Custom5": {
+          "type": "string"
+        },
+        "Custom6": {
+          "type": "string"
+        },
+        "Custom7": {
+          "type": "string"
+        },
+        "Custom8": {
+          "type": "string"
+        },
+        "Custom9": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "EmpId": {
+          "type": "string"
+        },
+        "ExpenseApprover": {
+          "type": "string"
+        },
+        "ExpenseApproverEmployeeID": {
+          "type": "string"
+        },
+        "ExpenseUser": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "InvoiceApprover": {
+          "type": "string"
+        },
+        "InvoiceUser": {
+          "type": "string"
+        },
+        "IsTestEmp": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "LedgerKey": {
+          "type": "number",
+          "format": "int32"
+        },
+        "LedgerName": {
+          "type": "string"
+        },
+        "LocaleName": {
+          "type": "string"
+        },
+        "LoginId": {
+          "type": "string"
+        },
+        "Mi": {
+          "type": "string"
+        },
+        "OrgUnit1": {
+          "type": "string"
+        },
+        "OrgUnit2": {
+          "type": "string"
+        },
+        "OrgUnit3": {
+          "type": "string"
+        },
+        "OrgUnit4": {
+          "type": "string"
+        },
+        "OrgUnit5": {
+          "type": "string"
+        },
+        "OrgUnit6": {
+          "type": "string"
+        },
+        "TripUser": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_GET_EXPENSE_UPDATED": {
+      "properties": {
+        "UserProfile": {
+          "$ref": "#/definitions/CONCUR_GET_EXPENSE_UPDATED##UserProfile"
+        }
+      }
+    },
+    "CONCUR_GET_SPEND_USERS": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        },
+        "of": {
+          "type": "string"
+        },
+        "control_type": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_GET_EXPENSE_APPROVER_DETAILS##UserProfile": {
+      "properties": {
+        "xmlns": {
+          "type": "string"
+        },
+        "xmlns:i": {
+          "type": "string"
+        },
+        "Active": {
+          "type": "string"
+        },
+        "CashAdvanceAccountCode": {
+          "type": "string"
+        },
+        "CrnKey": {
+          "type": "string"
+        },
+        "CtryCode": {
+          "type": "string"
+        },
+        "CtrySubCode": {
+          "type": "string"
+        },
+        "Custom1": {
+          "type": "string"
+        },
+        "Custom10": {
+          "type": "string"
+        },
+        "Custom11": {
+          "type": "string"
+        },
+        "Custom12": {
+          "type": "string"
+        },
+        "Custom13": {
+          "type": "string"
+        },
+        "Custom14": {
+          "type": "string"
+        },
+        "Custom15": {
+          "type": "string"
+        },
+        "Custom16": {
+          "type": "string"
+        },
+        "Custom17": {
+          "type": "string"
+        },
+        "Custom18": {
+          "type": "string"
+        },
+        "Custom19": {
+          "type": "string"
+        },
+        "Custom2": {
+          "type": "string"
+        },
+        "Custom20": {
+          "type": "string"
+        },
+        "Custom21": {
+          "type": "string"
+        },
+        "Custom3": {
+          "type": "string"
+        },
+        "Custom4": {
+          "type": "string"
+        },
+        "Custom5": {
+          "type": "string"
+        },
+        "Custom6": {
+          "type": "string"
+        },
+        "Custom7": {
+          "type": "string"
+        },
+        "Custom8": {
+          "type": "string"
+        },
+        "Custom9": {
+          "type": "string"
+        },
+        "EmailAddress": {
+          "type": "string"
+        },
+        "EmpId": {
+          "type": "string"
+        },
+        "ExpenseApprover": {
+          "type": "string"
+        },
+        "ExpenseApproverEmployeeID": {
+          "type": "string"
+        },
+        "ExpenseUser": {
+          "type": "string"
+        },
+        "FirstName": {
+          "type": "string"
+        },
+        "InvoiceApprover": {
+          "type": "string"
+        },
+        "InvoiceUser": {
+          "type": "string"
+        },
+        "IsTestEmp": {
+          "type": "string"
+        },
+        "LastName": {
+          "type": "string"
+        },
+        "LedgerKey": {
+          "type": "number",
+          "format": "int32"
+        },
+        "LedgerName": {
+          "type": "string"
+        },
+        "LocaleName": {
+          "type": "string"
+        },
+        "LoginId": {
+          "type": "string"
+        },
+        "Mi": {
+          "type": "string"
+        },
+        "OrgUnit1": {
+          "type": "string"
+        },
+        "OrgUnit2": {
+          "type": "string"
+        },
+        "OrgUnit3": {
+          "type": "string"
+        },
+        "OrgUnit4": {
+          "type": "string"
+        },
+        "OrgUnit5": {
+          "type": "string"
+        },
+        "OrgUnit6": {
+          "type": "string"
+        },
+        "TripUser": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_GET_EXPENSE_APPROVER_DETAILS": {
+      "properties": {
+        "UserProfile": {
+          "$ref": "#/definitions/CONCUR_GET_EXPENSE_APPROVER_DETAILS##UserProfile"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4##localeOverrides": {
+      "properties": {
+        "preferenceEndDayViewHour": {
+          "type": "number",
+          "format": "int32"
+        },
+        "preferenceFirstDayOfWeek": {
+          "type": "string"
+        },
+        "preferenceDateFormat": {
+          "type": "string"
+        },
+        "preferenceCurrencySymbolLocation": {
+          "type": "string"
+        },
+        "preferenceHourMinuteSeparator": {
+          "type": "string"
+        },
+        "preferenceDistance": {
+          "type": "string"
+        },
+        "preferenceDefaultCalView": {
+          "type": "string"
+        },
+        "preference24Hour": {
+          "type": "string"
+        },
+        "preferenceNumberFormat": {
+          "type": "string"
+        },
+        "preferenceStartDayViewHour": {
+          "type": "number",
+          "format": "int32"
+        },
+        "preferenceNegativeCurrencyFormat": {
+          "type": "string"
+        },
+        "preferenceNegativeNumberFormat": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4##meta": {
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string"
+        },
+        "lastModified": {
+          "type": "string"
+        },
+        "version": {
+          "type": "number",
+          "format": "int32"
+        },
+        "location": {
+          "type": "string"
+        },
+        "statusUrl": {
+          "type": "string"
+        },
+        "provisionId": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4##name": {
+      "properties": {
+        "honorificSuffix": {
+          "type": "string"
+        },
+        "givenName": {
+          "type": "string"
+        },
+        "familyName": {
+          "type": "string"
+        },
+        "familyNamePrefix": {
+          "type": "string"
+        },
+        "honorificPrefix": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "formatted": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4##emails": {
+      "properties": {
+        "verified": {
+          "type": "boolean"
+        },
+        "type": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "notifications": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User##manager": {
+      "properties": {
+        "value": {
+          "type": "string"
+        },
+        "employeeNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+      "properties": {
+        "terminationDate": {
+          "type": "string"
+        },
+        "companyId": {
+          "type": "string"
+        },
+        "manager": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User##manager"
+        },
+        "costCenter": {
+          "type": "string"
+        },
+        "department": {
+          "type": "string"
+        },
+        "startDate": {
+          "type": "string"
+        },
+        "employeeNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4": {
+      "properties": {
+        "localeOverrides": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4##localeOverrides"
+        },
+        "addresses": {
+          "type": "string"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "meta": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4##meta"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "name": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4##name"
+        },
+        "phoneNumbers": {
+          "type": "string"
+        },
+        "emergencyContacts": {
+          "type": "string"
+        },
+        "preferredLanguage": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "dateOfBirth": {
+          "type": "string"
+        },
+        "nickName": {
+          "type": "string"
+        },
+        "schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "active": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "string"
+        },
+        "emails": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4##emails"
+          }
+        },
+        "userName": {
+          "type": "string"
+        },
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:User": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4##urn:ietf:params:scim:schemas:extension:enterprise:2.0:User"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4_Request##body##Operations##value##approver": {
+      "properties": {
+        "employeeNumber": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4_Request##body##Operations##value": {
+      "properties": {
+        "approver": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4_Request##body##Operations##value##approver"
+        },
+        "primary": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4_Request##body##Operations": {
+      "properties": {
+        "op": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4_Request##body##Operations##value"
+          }
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4_Request##body": {
+      "properties": {
+        "schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "Operations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4_Request##body##Operations"
+          }
+        }
+      }
+    },
+    "CONCUR_MGR_UPD_API_V4_Request": {
+      "properties": {
+        "body": {
+          "$ref": "#/definitions/CONCUR_MGR_UPD_API_V4_Request##body"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##meta": {
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "created": {
+          "type": "string"
+        },
+        "lastModified": {
+          "type": "string"
+        },
+        "location": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:User##biManager": {
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:User##customData": {
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "value": {
+          "type": "string"
+        },
+        "syncGuid": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:User": {
+      "properties": {
+        "reimbursementCurrency": {
+          "type": "string"
+        },
+        "reimbursementType": {
+          "type": "string"
+        },
+        "ledgerCode": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "budgetCountryCode": {
+          "type": "string"
+        },
+        "stateProvince": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "cashAdvanceAccountCode": {
+          "type": "string"
+        },
+        "testEmployee": {
+          "type": "boolean"
+        },
+        "nonEmployee": {
+          "type": "boolean"
+        },
+        "biManager": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:User##biManager"
+        },
+        "customData": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:User##customData"
+          }
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Approver##report##approver": {
+      "properties": {
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Approver##report": {
+      "properties": {
+        "approver": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Approver##report##approver"
+        },
+        "primary": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Approver": {
+      "properties": {
+        "report": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Approver##report"
+          }
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Role##roles": {
+      "properties": {
+        "roleName": {
+          "type": "string"
+        },
+        "roleGroups": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Role": {
+      "properties": {
+        "roles": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Role##roles"
+          }
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:UserPreference": {
+      "properties": {
+        "showImagingIntro": {
+          "type": "boolean"
+        },
+        "expenseAuditRequired": {
+          "type": "string"
+        },
+        "allowCreditCardTransArrivalEmails": {
+          "type": "boolean"
+        },
+        "allowReceiptImageAvailEmails": {
+          "type": "boolean"
+        },
+        "promptForCardTransactionsOnReport": {
+          "type": "boolean"
+        },
+        "autoAddTripCardTransOnReport": {
+          "type": "boolean"
+        },
+        "promptForReportPrintFormat": {
+          "type": "boolean"
+        },
+        "defaultReportPrintFormat": {
+          "type": "string"
+        },
+        "showTotalOnReport": {
+          "type": "boolean"
+        },
+        "showExpenseOnReport": {
+          "type": "string"
+        },
+        "showInstructHelpPanel": {
+          "type": "boolean"
+        },
+        "useQuickItinAsDefault": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:WorkflowPreference": {
+      "properties": {
+        "emailStatusChangeOnCashAdvance": {
+          "type": "boolean"
+        },
+        "emailAwaitApprovalOnCashAdvance": {
+          "type": "boolean"
+        },
+        "emailStatusChangeOnReport": {
+          "type": "boolean"
+        },
+        "emailAwaitApprovalOnReport": {
+          "type": "boolean"
+        },
+        "promptForApproverOnReportSubmit": {
+          "type": "boolean"
+        },
+        "emailStatusChangeOnTravelRequest": {
+          "type": "boolean"
+        },
+        "emailAwaitApprovalOnTravelRequest": {
+          "type": "boolean"
+        },
+        "promptForApproverOnTravelRequestSubmit": {
+          "type": "boolean"
+        },
+        "emailStatusChangeOnPayment": {
+          "type": "boolean"
+        },
+        "emailAwaitApprovalOnPayment": {
+          "type": "boolean"
+        },
+        "promptForApproverOnPaymentSubmit": {
+          "type": "boolean"
+        }
+      }
+    },
+    "CONCUR_V4_MANAGER_EXPENSE": {
+      "properties": {
+        "schemas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "id": {
+          "type": "string"
+        },
+        "meta": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##meta"
+        },
+        "urn:ietf:params:scim:schemas:extension:spend:2.0:User": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:User"
+        },
+        "urn:ietf:params:scim:schemas:extension:spend:2.0:Approver": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Approver"
+        },
+        "urn:ietf:params:scim:schemas:extension:spend:2.0:Delegate": {
+          "type": "string"
+        },
+        "urn:ietf:params:scim:schemas:extension:spend:2.0:Role": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:Role"
+        },
+        "urn:ietf:params:scim:schemas:extension:spend:2.0:UserPreference": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:UserPreference"
+        },
+        "urn:ietf:params:scim:schemas:extension:enterprise:2.0:Payroll": {
+          "type": "string"
+        },
+        "urn:ietf:params:scim:schemas:extension:spend:2.0:WorkflowPreference": {
+          "$ref": "#/definitions/CONCUR_V4_MANAGER_EXPENSE##urn:ietf:params:scim:schemas:extension:spend:2.0:WorkflowPreference"
+        }
+      }
+    }
+  }
+}
